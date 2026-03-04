@@ -245,7 +245,7 @@
     "explanation": "ので is smoother/neutral for reason. (Pattern set 2)",
     "id": 31,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "もし雨が降ります、行きません。",
@@ -253,7 +253,7 @@
     "explanation": "Conditional needs たら/なら etc. (Pattern set 2)",
     "id": 32,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "これは私のです本。",
@@ -261,7 +261,7 @@
     "explanation": "Place の correctly in noun phrase. (Pattern set 2)",
     "id": 33,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "会議は三時からで始まります。",
@@ -276,7 +276,7 @@
     "correct": "日本へ旅行に行きたい。",
     "explanation": "Use に行く for purpose. (Pattern set 2)",
     "id": 35,
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -789,7 +789,7 @@
     "explanation": "Prefer noun linkage with の. (Pattern set 5)",
     "id": 99,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "私はお金がありませんです。",
@@ -805,7 +805,7 @@
     "explanation": "Do not stack ます and です in one predicate. (Pattern set 6)",
     "id": 101,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "日本語が好きをです。",
@@ -813,7 +813,7 @@
     "explanation": "好き takes が, not を. (Pattern set 6)",
     "id": 102,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "静かい部屋",
@@ -821,7 +821,7 @@
     "explanation": "な-adjectives require な before nouns. (Pattern set 6)",
     "id": 103,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "これはおいしいだ。",
@@ -829,7 +829,7 @@
     "explanation": "い-adjectives do not take だ in plain present. (Pattern set 6)",
     "id": 104,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "先生は私を日本語を教えました。",
@@ -837,7 +837,7 @@
     "explanation": "Recipient takes に with 教える. (Pattern set 6)",
     "id": 105,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "図書館に本を借りました。",
@@ -845,7 +845,7 @@
     "explanation": "で marks location of action. (Pattern set 6)",
     "id": 106,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "私は昨日東京に行きます。",
@@ -853,7 +853,7 @@
     "explanation": "Use past tense for past actions. (Pattern set 6)",
     "id": 107,
     "issued": false,
-    "completed": false
+    "completed": true
   },
   {
     "wrong": "東京は人が多いです、きれいです。",
