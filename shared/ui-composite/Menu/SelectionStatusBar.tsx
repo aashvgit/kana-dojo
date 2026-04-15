@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import clsx from 'clsx';
 import { useKanjiSelection } from '@/features/Kanji';
 import { useVocabSelection } from '@/features/Vocabulary';
@@ -81,6 +81,9 @@ const SelectionStatusBar = () => {
     left: 0,
     width: '100%',
   });
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const updateLayout = () => {
@@ -130,6 +133,53 @@ const SelectionStatusBar = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
+    const updateViewport = () => setIsMobileViewport(mediaQuery.matches);
+
+    updateViewport();
+    mediaQuery.addEventListener('change', updateViewport);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateViewport);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector(
+      '[data-scroll-restoration-id="container"]',
+    );
+
+    if (!scrollContainer) {
+      console.warn(
+        'Scroll container not found, SelectionStatusBar scroll behavior disabled',
+      );
+      return;
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = scrollContainer.scrollTop;
+
+      if (currentScrollY <= 10) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY.current) {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    scrollContainer.addEventListener('scroll', handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      scrollContainer.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Label text
   const selectionLabel = isKana ? 'Selected Groups:' : 'Selected Levels:';
 
@@ -138,9 +188,15 @@ const SelectionStatusBar = () => {
       {hasSelection && (
         <motion.div
           initial={{ y: '-100%', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
+          animate={{
+            y: isMobileViewport ? (isVisible ? 0 : '-100%') : 0,
+            opacity: isMobileViewport ? (isVisible ? 1 : 0) : 1,
+          }}
           exit={{ y: '-100%', opacity: 0 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          transition={{
+            duration: 0.3,
+            ease: [0.4, 0, 0.2, 1],
+          }}
           style={{
             top: `${layout.top}px`,
             left:
@@ -204,4 +260,3 @@ const SelectionStatusBar = () => {
 };
 
 export default SelectionStatusBar;
-

@@ -361,9 +361,12 @@ const Sidebar = () => {
   const { playClick } = useClick();
 
   const escButtonRef = useRef<HTMLButtonElement | null>(null);
+  const lastScrollY = useRef(0);
 
   // Lazy load experiments
   const [loadedExperiments, setLoadedExperiments] = useState<Experiment[]>([]);
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
   const [isDesktopSidebarCollapsed, setIsDesktopSidebarCollapsed] = useState(
     () => {
       if (typeof window === 'undefined') return false;
@@ -518,6 +521,58 @@ const Sidebar = () => {
     }
   }, [pathWithoutLocale]);
 
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 1023px)');
+    const updateViewport = () => setIsMobileViewport(mediaQuery.matches);
+
+    updateViewport();
+    mediaQuery.addEventListener('change', updateViewport);
+
+    return () => {
+      mediaQuery.removeEventListener('change', updateViewport);
+    };
+  }, []);
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector(
+      '[data-scroll-restoration-id="container"]',
+    );
+
+    if (!scrollContainer) {
+      console.warn(
+        'Scroll container not found, Sidebar scroll behavior disabled',
+      );
+      return;
+    }
+
+    const handleScroll = () => {
+      const currentScrollY = scrollContainer.scrollTop;
+
+      // Always show when at top of page
+      if (currentScrollY <= 10) {
+        setIsVisible(true);
+      }
+      // Hide when scrolling down past threshold
+      else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setIsVisible(false);
+      }
+      // Show when scrolling up
+      else if (currentScrollY < lastScrollY.current) {
+        setIsVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    scrollContainer.addEventListener('scroll', handleScroll, {
+      passive: true,
+    });
+
+    return () => {
+      scrollContainer.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   // Build secondary nav sections with lazy-loaded experiments
   const secondaryNavSections: NavSection[] = [
     ...staticSecondaryNavSections,
@@ -581,8 +636,17 @@ const Sidebar = () => {
   };
 
   return (
-    <aside
+    <motion.aside
       id='main-sidebar'
+      initial={false}
+      animate={{
+        y: isMobileViewport ? (isVisible ? 0 : '100%') : 0,
+        opacity: isMobileViewport ? (isVisible ? 1 : 0) : 1,
+      }}
+      transition={{
+        duration: 0.3,
+        ease: [0.4, 0, 0.2, 1],
+      }}
       className={clsx(
         'flex lg:flex-col lg:items-start',
         'lg:relative lg:sticky lg:top-0 lg:h-screen lg:overflow-x-hidden lg:overflow-y-auto',
@@ -709,7 +773,7 @@ const Sidebar = () => {
           <PanelLeftClose className='h-5 w-5 shrink-0' />
         )}
       </button>
-    </aside>
+    </motion.aside>
   );
 };
 
