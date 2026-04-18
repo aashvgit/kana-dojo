@@ -537,6 +537,41 @@
     "character": "Son Goku"
   },
   {
+  "japanese": "やれやれだぜ。",
+  "romaji": "Yare yare da ze.",
+  "english": "Good grief.",
+  "anime": "JoJo's Bizarre Adventure: Stardust Crusaders",
+  "character": "Jotaro Kujo"
+},
+{
+  "japanese": "俺を誰だと思ってやがる!",
+  "romaji": "Ore o dare da to omotte yagaru!",
+  "english": "Who the hell do you think I am! (alt wording 46)",
+  "anime": "Gurren Lagann",
+  "character": "Kamina"
+},
+{
+  "japanese": "やれやれだぜ",
+  "romaji": "Yare yare da ze",
+  "english": "Good grief. (alt wording 6)",
+  "anime": "JoJo's Bizarre Adventure: Stardust Crusaders",
+  "character": "Jotaro Kujo"
+},
+  {
+  "japanese": "僕はもう逃げない!",
+  "romaji": "Boku wa mou nigenai!",
+  "english": "I won't run away anymore! (alt wording 47)",
+  "anime": "Hunter x Hunter",
+  "character": "Gon Freecss"
+}, 
+  {
+  "japanese": "シシシシシ",
+  "romaji": "Shishishishi",
+  "english": "Shishishi! (alt wording 30) (alt wording 82)",
+  "anime": "One Piece",
+  "character": "Monkey D. Luffy"
+}
+]
     "japanese": "やれやれだぜ。",
     "romaji": "Yare yare da ze.",
     "english": "Good grief.",
@@ -591,5 +626,12 @@
     "english": "Yes! Yes! Yes! Yes! (alt wording 2)",
     "anime": "JoJo's Bizarre Adventure: Stardust Crusaders",
     "character": "DIO"
-  }
+  },
+{
+  "japanese": "シシシシシ",
+  "romaji": "Shishishishi",
+  "english": "Shishishi! (alt wording 30) (alt wording 82)",
+  "anime": "One Piece",
+  "character": "Monkey D. Luffy"
+}
 ]
