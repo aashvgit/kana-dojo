@@ -78,7 +78,7 @@
     "english": "When in a village, follow the village customs",
     "meaning": "When in Rome, do as the Romans do",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 10,
@@ -123,7 +123,7 @@
     "english": "Hearing a hundred times is not as good as seeing once",
     "meaning": "Seeing is believing",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 15,
@@ -168,7 +168,7 @@
     "english": "Even a walking dog will hit a stick",
     "meaning": "Try anything and you might get lucky (or unlucky)",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 20,
@@ -186,7 +186,7 @@
     "english": "Good medicine tastes bitter",
     "meaning": "Helpful advice often sounds harsh",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 22,
@@ -213,7 +213,7 @@
     "english": "Preaching Buddha to a horse's ear",
     "meaning": "Wasting good advice on someone who won't listen",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 25,
@@ -329,7 +329,7 @@
     "romaji": "Deru kugi wa utareru",
     "english": "The nail that sticks out gets hammered down",
     "meaning": "Those who stand out may be criticized",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -627,7 +627,7 @@
     "english": "One cry of the crane",
     "meaning": "A single influential person settles a matter",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 71,
@@ -654,7 +654,7 @@
     "english": "Do laundry while the ogre is away",
     "meaning": "Take advantage of someone's absence",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 74,
@@ -752,7 +752,7 @@
     "romaji": "Yabu wo tsutsuite hebi wo dasu",
     "english": "Poke the bush and bring out a snake",
     "meaning": "Stir up trouble unnecessarily",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -807,7 +807,7 @@
     "english": "Continuation is power",
     "meaning": "Consistency leads to strength",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 91,
@@ -906,7 +906,7 @@
     "english": "Early rising is worth three coins",
     "meaning": "Getting up early brings benefits",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 102,
@@ -923,7 +923,7 @@
     "romaji": "Nasake wa hito no tame narazu",
     "english": "Kindness is not for others",
     "meaning": "Good deeds return to you",
-    "issued": false,
+    "issued": true,
     "completed": false
   },
   {
@@ -960,7 +960,7 @@
     "english": "The moon and a turtle",
     "meaning": "Vastly different; not comparable",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 108,
@@ -1014,7 +1014,7 @@
     "english": "An iron club to an ogre",
     "meaning": "Adding strength to the strong",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 114,
@@ -1086,7 +1086,7 @@
     "english": "Fall seven times, get up eight",
     "meaning": "Never give up",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 122,
@@ -1185,7 +1185,7 @@
     "english": "If in a hurry, go around",
     "meaning": "The safer path can be faster",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 133,
@@ -1221,7 +1221,7 @@
     "english": "After ease comes hardship",
     "meaning": "Good times and bad times alternate",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 137,
@@ -1320,7 +1320,7 @@
     "english": "What happens twice will happen a third time",
     "meaning": "Patterns tend to repeat",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 148,
@@ -1403,7 +1403,7 @@
     "english": "Even monkeys fall from trees",
     "meaning": "Experts make mistakes",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 157,
@@ -1538,7 +1538,7 @@
     "english": "Tomorrow’s wind will blow tomorrow",
     "meaning": "Don’t worry too much about the future",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 172,
@@ -1547,7 +1547,7 @@
     "english": "With comfort comes hardship",
     "meaning": "Life has ups and downs",
     "completed": false,
-    "issued": false
+    "issued": true
   },
   {
     "id": 173,
