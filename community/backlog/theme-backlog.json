@@ -858,8 +858,10 @@
     "backgroundColor": "oklch(17.0% 0.045 255.0 / 1)",
     "mainColor": "oklch(62.0% 0.185 220.0 / 1)",
     "secondaryColor": "oklch(70.0% 0.175 15.0 / 1)",
-    "issued": true,
-    "completed": false
+    "issued": false,
+    "completed": false,
+    "completedBy": "sisyphe550",
+    "completedPR": 14403
   },
   {
     "id": "school-uniform",
